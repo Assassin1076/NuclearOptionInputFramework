@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using UnityEngine;
 
 namespace InputFramework
@@ -28,7 +29,7 @@ namespace InputFramework
     public static class ExtraInputManager
     {
         private static readonly List<ModActionDefinition> pendingActions = new();
-        private static readonly string savePath = Path.Combine(Paths.PluginPath, "ExtraInput", "ExtraInputActions.json");
+        private static readonly string savePath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "ExtraInputActions.json");
 
         internal static bool RewiredInitialized { get; set; } = false;
 

@@ -30,20 +30,25 @@ namespace InputFramework
             {
                 if (actions.Any(a => a.name == modAction.Name))
                     continue;
-
+                var targetCateory = debugCategory;
+                
+                if(modAction.Category != null)
+                {
+                    targetCateory = categories.FirstOrDefault(c => c.name == modAction.Category);
+                }
                 var action = new InputAction
                 {
                     id = nextId++,
                     name = modAction.Name,
                     type = modAction.Type,
                     descriptiveName = modAction.Name,
-                    categoryId = debugCategory.id,
+                    categoryId = targetCateory.id,
                 };
                 action._userAssignable = true;
 
                 actions.Add(action);
 
-                userData.actionCategoryMap.AddAction(debugCategory.id, action.id);
+                userData.actionCategoryMap.AddAction(targetCateory.id, action.id);
 
                 modAction.AssignedId = action.id;
             }
