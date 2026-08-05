@@ -62,7 +62,7 @@ namespace InputFramework
             SavePendingActions();
         }
 
-        private static void SavePendingActions()
+        internal static void SavePendingActions()
         {
             try
             {
@@ -71,7 +71,7 @@ namespace InputFramework
             }
             catch (Exception ex)
             {
-                Debug.LogError($"[ExtraInputManager] Savint Register of Action failed: {ex}");
+                Debug.LogError($"[ExtraInputManager] Saving registered Actions failed: {ex}");
             }
         }
 

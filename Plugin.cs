@@ -5,7 +5,7 @@ using Rewired;
 
 namespace InputFramework
 {
-    [BepInPlugin("experimental.assassin1076.extrainputframework", "Extra Input Framework", "0.0.1")]
+    [BepInPlugin("experimental.assassin1076.extrainputframework", "Extra Input Framework", "0.0.2")]
     public class Plugin : BaseUnityPlugin
     {
         internal static new ManualLogSource Logger;

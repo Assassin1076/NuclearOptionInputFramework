@@ -49,5 +49,31 @@
 		<Reference Include="Rewired_Core">
 		  <HintPath>F:\SteamLibrary\steamapps\common\Nuclear Option\NuclearOption_Data\Managed\Rewired_Core.dll</HintPath>
 		</Reference>
+		<Reference Include="Unity.RenderPipelines.Core.Runtime">
+			<HintPath>F:\SteamLibrary\steamapps\common\Nuclear Option\NuclearOption_Data\Managed\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.Universal.Runtime">
+			<HintPath>F:\SteamLibrary\steamapps\common\Nuclear Option\NuclearOption_Data\Managed\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.TextMeshPro">
+			<HintPath>F:\SteamLibrary\steamapps\common\Nuclear Option\NuclearOption_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UI">
+			<HintPath>F:\SteamLibrary\steamapps\common\Nuclear Option\NuclearOption_Data\Managed\UnityEngine.UI.dll</HintPath>
+		</Reference>
 	</ItemGroup>
+	<PropertyGroup Condition="'$(Configuration)'=='Release'">
+
+		<DebugType>portable</DebugType>
+		<DebugSymbols>true</DebugSymbols>
+
+		<!-- 清理路径 -->
+		<PathMap>
+			$(MSBuildProjectDirectory)=/
+		</PathMap>
+
+		<!-- 稳定构建 -->
+		<Deterministic>true</Deterministic>
+
+	</PropertyGroup>
 </Project>
